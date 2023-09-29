@@ -18,9 +18,6 @@ public class ArrayStorage {
 
     public void save(Resume r) {
 
-//        for (int i = 0; i < storage.length; i++){
-//            storage[i] = r;
-//        }
         if (getIndex(r.getUuid()) != -1){
             System.out.println("Resume " + r.getUuid() + " not exist");
         } else if(size == storage.length){
@@ -41,17 +38,6 @@ public class ArrayStorage {
     }
 
     public Resume get(String uuid) {
-//        for (int i = 0; i < size; i++){
-//            if (uuid == storage[i].getUuid()){
-//                return storage[i];
-//            }
-//        }
-//
-//        for (Resume resume : storage){
-//            if (resume.getUuid().equals(uuid)){
-//                return resume;
-//            }
-//        }
 
         int index = getIndex(uuid);
         if (index == -1){
